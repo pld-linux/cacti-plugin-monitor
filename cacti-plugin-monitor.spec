@@ -19,7 +19,8 @@ BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 %define		webcactipluginroot /usr/share/cacti/plugins/%{namesrc}
 
 %description
-Plugin for Cacti.
+Plugin for Cacti- adds a tab to visually show you the Up / Down Status
+of all your hosts. It will audibly alert you whenever a host goes down. 
 
 %description -l pl
 Wtyczka do Cacti.
