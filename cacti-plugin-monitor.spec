@@ -3,13 +3,13 @@
 Summary:	Plugin for Cacti - Monitor
 Summary(pl):	Wtyczka do Cacti - Monitor
 Name:		cacti-plugin-monitor
-Version:	0.4
+Version:	0.6
 Release:	0.1
 License:	GPL v2
 Group:		Applications/WWW
 #!!!!problem with version
 Source0:	http://download.cactiusers.org/downloads/%{namesrc}.tar.gz
-# Source0-md5:	7e475481d986f5eb04bd635d9376c229
+# Source0-md5:	a5862f37524303fd6efd8feaf09dc72c
 URL:		http://www.cactiusers.org/
 BuildRequires:	rpm-perlprov
 Requires:	cacti
