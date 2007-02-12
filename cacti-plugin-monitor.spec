@@ -1,7 +1,7 @@
 %define		namesrc	monitor
 %include	/usr/lib/rpm/macros.perl
 Summary:	Plugin for Cacti - Monitor
-Summary(pl.UTF-8):   Wtyczka do Cacti - Monitor
+Summary(pl.UTF-8):	Wtyczka do Cacti - Monitor
 Name:		cacti-plugin-monitor
 Version:	0.7
 Release:	1
