@@ -3,12 +3,12 @@
 Summary:	Plugin for Cacti - Monitor
 Summary(pl.UTF-8):	Wtyczka do Cacti - Monitor
 Name:		cacti-plugin-monitor
-Version:	0.7
+Version:	0.8.1
 Release:	1
 License:	GPL v2
 Group:		Applications/WWW
-Source0:	http://cactiusers.net/downloads/plugins/%{namesrc}-%{version}.tar.gz
-# Source0-md5:	f630549cc354236ea140282b1741fb9d
+Source0:	http://mirror.cactiusers.org/downloads/plugins/%{namesrc}-%{version}.zip
+# Source0-md5:	72d226f568abce60775806c72e504f96
 URL:		http://www.cactiusers.org/
 BuildRequires:	rpm-perlprov
 Requires:	cacti
@@ -27,7 +27,7 @@ Wtyczka do Cacti dodająca zakładkę wizualnie pokazującą stan
 dźwiękowo alarmuje kiedy host przestaje działać.
 
 %prep
-%setup -q -n %{namesrc}
+%setup -q -c
 
 %install
 rm -rf $RPM_BUILD_ROOT
