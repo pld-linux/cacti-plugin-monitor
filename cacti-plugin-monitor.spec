@@ -19,7 +19,8 @@ BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
 Plugin for Cacti - adds a tab to visually show you the Up/Down Status
-of all your hosts. It will audibly alert you whenever a host goes down. 
+of all your hosts. It will audibly alert you whenever a host goes
+down.
 
 %description -l pl.UTF-8
 Wtyczka do Cacti dodająca zakładkę wizualnie pokazującą stan
@@ -32,7 +33,7 @@ dźwiękowo alarmuje kiedy host przestaje działać.
 %install
 rm -rf $RPM_BUILD_ROOT
 install -d $RPM_BUILD_ROOT%{webcactipluginroot}
-cp -aRf * $RPM_BUILD_ROOT%{webcactipluginroot}
+cp -a * $RPM_BUILD_ROOT%{webcactipluginroot}
 
 %clean
 rm -rf $RPM_BUILD_ROOT
