@@ -1,18 +1,23 @@
 %define		plugin	monitor
-%include	/usr/lib/rpm/macros.perl
-Summary:	Plugin for Cacti - Monitor
+%define		php_min_version 5.0.0
+%include	/usr/lib/rpm/macros.php
+Summary:	Plugin for Cacti - Monitoring for Cacti
 Summary(pl.UTF-8):	Wtyczka do Cacti - Monitor
-Name:		cacti-plugin-monitor
-Version:	0.8.2
+Name:		cacti-plugin-%{plugin}
+Version:	1.3
 Release:	1
 License:	GPL v2
 Group:		Applications/WWW
-Source0:	http://mirror.cactiusers.org/downloads/plugins/%{plugin}-%{version}.zip
-# Source0-md5:	c3ce79679e7ae2e6a1d91a294dade776
-URL:		http://www.cactiusers.org/
-BuildRequires:	rpm-perlprov
-BuildRequires:	unzip
+Source0:	http://docs.cacti.net/_media/plugin:monitor-v%{version}-1.tgz
+# Source0-md5:	45a354b05be7eeebb5319c0ddcee2849
+URL:		http://docs.cacti.net/plugin:monitor
+BuildRequires:	rpm-php-pearprov >= 4.4.2-11
 Requires:	cacti
+Requires:	cacti(pia) >= 2.8
+Requires:	php-common >= 4:%{php_min_version}
+Requires:	php-date
+Requires:	php-mysql
+Requires:	php-pcre
 BuildArch:	noarch
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
@@ -30,12 +35,13 @@ Wtyczka do Cacti dodająca zakładkę wizualnie pokazującą stan
 dźwiękowo alarmuje kiedy host przestaje działać.
 
 %prep
-%setup -q -c
+%setup -qc
+mv %{plugin}/{LICENSE,README} .
 
 %install
 rm -rf $RPM_BUILD_ROOT
 install -d $RPM_BUILD_ROOT%{plugindir}
-cp -a . $RPM_BUILD_ROOT%{plugindir}
+cp -a %{plugin}/* $RPM_BUILD_ROOT%{plugindir}
 
 %clean
 rm -rf $RPM_BUILD_ROOT
