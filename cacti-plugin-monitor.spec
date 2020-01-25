@@ -1,6 +1,5 @@
 %define		plugin	monitor
 %define		php_min_version 5.0.0
-%include	/usr/lib/rpm/macros.php
 Summary:	Plugin for Cacti - Monitoring for Cacti
 Summary(pl.UTF-8):	Wtyczka do Cacti - Monitor
 Name:		cacti-plugin-%{plugin}
