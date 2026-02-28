@@ -4,7 +4,7 @@ Summary:	Plugin for Cacti - Monitoring for Cacti
 Summary(pl.UTF-8):	Wtyczka do Cacti - Monitor
 Name:		cacti-plugin-%{plugin}
 Version:	1.3
-Release:	7
+Release:	8
 License:	GPL v2
 Group:		Applications/WWW
 Source0:	http://docs.cacti.net/_media/plugin:monitor-v%{version}-1.tgz
